@@ -232,14 +232,13 @@ const members = {
     photos: [
       "JayaKaran.jpg"
     ],
-    description: "Cyborg",
-    description: "${CONTENT?'':DEFAULT}",
+    description: "172 cm of pure enthusiasm and extra flesh—thanks to an unbreakable bond with food. Maa DIL runs on songs (more of Hindi), stand-up bits, and cricket highs. Vir Das wit and Samay Raina chaos fuel my daydreams. Makin’ me partial Vadakkan—but no saffron art. Often physically present, mentally lost in a playlist or plotting my imaginary Netflix special. And yeah, I’m a bit more pessimistic—guess it's a flaw, but it keeps me grounded. Source: Wikipedia",
     portfolio: "I don't have one",
-    energySource: "${CONTENT?'':DEFAULT}",
-    dimension: "${CONTENT?'':DEFAULT}",
-    type: "${CONTENT?'':DEFAULT}",
-    hobbiesInstalled: "${CONTENT?'':DEFAULT}",
-    specialFeatures: "${CONTENT?'':DEFAULT}"
+    energySource: "Arijit and Atif songs, Red Bull, Biryani",
+    dimension: "0.5 ft shorter than Kyrie",
+    type: "Limited edition—pessimistically optimistic",
+    hobbiesInstalled: "Coding, learning new cyber stuffs, cooking",
+    specialFeatures: "Can do MID anchoring sometimes, and therapy sessions"
   },
   "9": {
     id: "9",
