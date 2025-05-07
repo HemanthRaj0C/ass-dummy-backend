@@ -262,7 +262,7 @@ const members = {
     photos: [
       "Akshay.jpg"
     ],
-    description: "${CONTENT?'':DEFAULT}",
+    description: "Legend tells of a being known only as 'Legendary AK' — forged in caffeine, tempered by deadlines, and  powered by panic. I specialize in making simple things complicated, and complicated things... even more complicated. I have no idea what i’m doing most of the time, but i do it with confidence and a weird smile that makes people think I’ve got a plan (i don’t). I respond to stress with memes, avoid responsibilities like a professional ninja, and somehow end up in charge of things I didn’t even sign up for. My presence in the team is like a glitch in the matrix—confusing, unexpected, and somehow still part of the main storyline. I believe in doing things last minute, making things weird on purpose, and pretending everything is under control. If life had patch notes, I’d still skip the tutorial and click 'continue'. Proceed with caution, I might start dancing randomly or ask deep life questions at 3AM. Either way, you won’t forget me.",
     portfolio: "I don't have one",
     energySource: "${CONTENT?'':DEFAULT}",
     dimension: "${CONTENT?'':DEFAULT}",
@@ -287,7 +287,7 @@ const members = {
   },
   "12": {
     id: "12",
-    name: "ALWIN ARUN SHELVAN",
+    name: "ALWIN ARUL SHELVAN",
     role: "Documentation",
     photos: [
       "Alwin.jpg"
