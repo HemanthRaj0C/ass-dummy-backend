@@ -7,7 +7,7 @@ import fs from "fs";
 
 dotenv.config();
 
-const port = process.env.PORT
+const port = process.env.PORT;
 
 const photos = {
   "QUIZ_1.jpg": "jpg",
@@ -36,22 +36,20 @@ const photos = {
   "Alwin.jpg": "jpg",
 };
 const events = {
-  "1": {
+  1: {
     id: "1",
     name: "Quiz",
     participants: 100,
     date: "26-06-2024",
-    photos: [
-      "QUIZ_1.jpg",
-      "QUIZ_2.jpg"
-    ],
+    photos: ["QUIZ_1.jpg", "QUIZ_2.jpg"],
     registration_start: new Date(),
     location: "Online",
     min_team_size: 1,
     max_team_size: 1,
-    description: "Quiz on cybersecurity basics tested participants' knowledge of key concepts such as malware types, phishing, firewalls, and encryption. Questions covered best practices for securing personal and organizational data, recognizing cyber threats, and implementing preventive measures. The interactive format encouraged engagement and reinforced fundamental cybersecurity principles. Scores were tallied, and top performers were recognized, providing a fun and educational experience for all involved.",
+    description:
+      "Quiz on cybersecurity basics tested participants' knowledge of key concepts such as malware types, phishing, firewalls, and encryption. Questions covered best practices for securing personal and organizational data, recognizing cyber threats, and implementing preventive measures. The interactive format encouraged engagement and reinforced fundamental cybersecurity principles. Scores were tallied, and top performers were recognized, providing a fun and educational experience for all involved.",
   },
-  "2": {
+  2: {
     id: "2",
     name: "WEBINAR",
     participants: 200,
@@ -60,13 +58,11 @@ const events = {
     location: "Online",
     min_team_size: 1,
     max_team_size: 1,
-    photos: [
-      "WEBINAR_1.jpg",
-      "WEBINAR_2.jpg",
-    ],
-    description: "Webinar on Linux basics covered essential commands, file management, and permissions. Participants learned how to navigate the filesystem, use command-line tools, and handle user permissions. The session also introduced package management and basic shell scripting. Attendees gained hands-on experience through practical exercises, enhancing their understanding of Linux system administration. The webinar concluded with a Q&A session to address specific queries.",
+    photos: ["WEBINAR_1.jpg", "WEBINAR_2.jpg"],
+    description:
+      "Webinar on Linux basics covered essential commands, file management, and permissions. Participants learned how to navigate the filesystem, use command-line tools, and handle user permissions. The session also introduced package management and basic shell scripting. Attendees gained hands-on experience through practical exercises, enhancing their understanding of Linux system administration. The webinar concluded with a Q&A session to address specific queries.",
   },
-  "3": {
+  3: {
     id: "3",
     name: "WORKSHOP",
     participants: 100,
@@ -75,49 +71,53 @@ const events = {
     location: "CIT Chennai",
     min_team_size: 1,
     max_team_size: 4,
-    photos: [
-      "WORKSHOP_1.jpg",
-      "WORKSHOP_1.jpg",
-    ],
-    description: "The 'Beyond Your Organisation' workshop focused on enhancing cybersecurity skills. Attendees learned about advanced threat detection, incident response, and secure coding practices. The workshop emphasized the importance of proactive defense mechanisms and the latest cybersecurity trends. Participants engaged in hands-on activities, including network vulnerability assessments and simulated cyber-attacks. Expert speakers provided insights into real-world cyber threats and mitigation strategies, concluding with a Q&A session for in-depth discussions.",
+    photos: ["WORKSHOP_1.jpg", "WORKSHOP_1.jpg"],
+    description:
+      "The 'Beyond Your Organisation' workshop focused on enhancing cybersecurity skills. Attendees learned about advanced threat detection, incident response, and secure coding practices. The workshop emphasized the importance of proactive defense mechanisms and the latest cybersecurity trends. Participants engaged in hands-on activities, including network vulnerability assessments and simulated cyber-attacks. Expert speakers provided insights into real-world cyber threats and mitigation strategies, concluding with a Q&A session for in-depth discussions.",
   },
 };
 
 const podcasts = {
-  "EP1": {
+  EP1: {
     id: "EP1",
     name: "Everyday Cybersecurity: Practical Tips for the Digital Era",
     publish: true,
     guests: ["Syed Suhail Ikraam, Cybersecurity Practitioner"],
-    description: "In this episode, we're breaking down cybersecurity essentials! Discover why it's not for everyone and get a roadmap for ethical hacking, with a focus on mastering Linux OS. Packed with practical tips, this episode is a must-listen for anyone interested in cybersecurity! Tune in now!",
+    description:
+      "In this episode, we're breaking down cybersecurity essentials! Discover why it's not for everyone and get a roadmap for ethical hacking, with a focus on mastering Linux OS. Packed with practical tips, this episode is a must-listen for anyone interested in cybersecurity! Tune in now!",
     image: "EP1.jpg",
     mime: "mp3",
-    spotify: "https://open.spotify.com/episode/0ZMwdwTLYCyAtFK3gqun3R?si=60bd2edd73f34c5a"
+    spotify:
+      "https://open.spotify.com/episode/0ZMwdwTLYCyAtFK3gqun3R?si=60bd2edd73f34c5a",
   },
-  "EP2": {
+  EP2: {
     id: "EP2",
     name: "Unveiling Cyber Threats: Defensive Strategies with Vignesh Sir",
     publish: true,
     guests: ["Vignesh Sir, CEO of CyberXtron"],
-    description: "Join Vignesh Sir, CEO of CyberXtron, in the first episode of our podcast series as we delve into essential defensive strategies against cyber threats. Discover proactive measures, best practices, and insights on staying ahead in the dynamic world of cybersecurity.",
+    description:
+      "Join Vignesh Sir, CEO of CyberXtron, in the first episode of our podcast series as we delve into essential defensive strategies against cyber threats. Discover proactive measures, best practices, and insights on staying ahead in the dynamic world of cybersecurity.",
     image: "EP2.jpg",
     mime: "mp3",
-    spotify: "https://open.spotify.com/episode/2xc30vPB1UHp5AdWiiJwaA?si=cSXluBf9Rgey0NXQFf9g6w"
+    spotify:
+      "https://open.spotify.com/episode/2xc30vPB1UHp5AdWiiJwaA?si=cSXluBf9Rgey0NXQFf9g6w",
   },
-  "EP3": {
+  EP3: {
     id: "EP3",
     name: "Cybersecurity Roadmap Unlocked:Your Ultimate Guide to Success!",
     publish: true,
     guests: ["Rakesh Sir"],
-    description: "Ready to crack the code on cybersecurity? Join Rakesh Sir on this high-voltage episode of Syntax Stories! In Part 1, get the inside scoop on their journey, must-have certifications, and standout projects. Discover why hackathons are your secret weapon and what makes you a top hire. Tune in and kickstart your journey to cybersecurity stardom!",
+    description:
+      "Ready to crack the code on cybersecurity? Join Rakesh Sir on this high-voltage episode of Syntax Stories! In Part 1, get the inside scoop on their journey, must-have certifications, and standout projects. Discover why hackathons are your secret weapon and what makes you a top hire. Tune in and kickstart your journey to cybersecurity stardom!",
     image: "EP3.jpg",
     mime: "mp3",
-    spotify: "https://open.spotify.com/episode/7actC0aaJZpDpn4INXaRMP?si=8w7V0n44Ri6uVBrWzOs2cg"
+    spotify:
+      "https://open.spotify.com/episode/7actC0aaJZpDpn4INXaRMP?si=8w7V0n44Ri6uVBrWzOs2cg",
   },
 };
 
 const members = {
-  "1": {
+  1: {
     id: "1",
     name: "SITHARSHAN",
     role: "President",
@@ -125,180 +125,177 @@ const members = {
       "Sitharshan1.jpg",
       "Sitharshan2.jpg",
       "Sitharshan3.jpg",
-      "Sitharshan4.jpg"
+      "Sitharshan4.jpg",
     ],
-    description: "I'm a tech wizard with a passion for C++ (the supreme language, obviously) and an undying love for cybersecurity. Most of my time is split between battling malware like a digital gladiator and spending quality moments with my girlfriend, who somehow puts up with my nerdy rants. As the self-proclaimed supreme leader of my team, I excel at pushing them to their limits—usually by making them work so hard they question their life choices (all in good spirit, of course). Chaos, code, and a little bit of romance—that's how I roll!",
+    description:
+      "I'm a tech wizard with a passion for C++ (the supreme language, obviously) and an undying love for cybersecurity. Most of my time is split between battling malware like a digital gladiator and spending quality moments with my girlfriend, who somehow puts up with my nerdy rants. As the self-proclaimed supreme leader of my team, I excel at pushing them to their limits—usually by making them work so hard they question their life choices (all in good spirit, of course). Chaos, code, and a little bit of romance—that's how I roll!",
     portfolio: "I don't have one",
     energySource: "Pepsi, Snickers, Podcast, Linux",
     dimension: "1920 x 1080",
     type: "Girlzzzz",
     hobbiesInstalled: "Malware Building, Team Torturing",
-    specialFeatures: "Code, Command, Conquer (with a side of caffeine-induced evil laughter)"
+    specialFeatures:
+      "Code, Command, Conquer (with a side of caffeine-induced evil laughter)",
   },
-  "2": {
+  2: {
     id: "2",
     name: "LINNGESHWAR B",
     role: "Vice President",
-    photos: [
-      "Linngesh.jpg"
-    ],
-    description: "I'm a teleportation connoisseur trapped in a world that insists on walking coz why settle for ordinary when you can dream extraordinary? At 6 feet (copium), my life runs on video games, mountains of food, and sitcom reruns that work better than any therapy. If it were a TV show, it'd be a comedy where my love handles steal the spotlight. Chaos, cravings, and attempts at clever comebacks that fail miserably but hey this is just another day in the world of linngesh!",
+    photos: ["Linngesh.jpg"],
+    description:
+      "I'm a teleportation connoisseur trapped in a world that insists on walking coz why settle for ordinary when you can dream extraordinary? At 6 feet (copium), my life runs on video games, mountains of food, and sitcom reruns that work better than any therapy. If it were a TV show, it'd be a comedy where my love handles steal the spotlight. Chaos, cravings, and attempts at clever comebacks that fail miserably but hey this is just another day in the world of linngesh!",
     portfolio: "I don't have one",
-    energySource: "Good Chocolate cake, rom-coms, AAA battery ,procrastination fuel",
+    energySource:
+      "Good Chocolate cake, rom-coms, AAA battery ,procrastination fuel",
     dimension: "The friend zone",
     type: "Tall sum/total XX",
     hobbiesInstalled: "Mining and crafting, snack hunting, coding",
-    specialFeatures: "Will gladly follow the crowd, as long as the destination has snacks"
+    specialFeatures:
+      "Will gladly follow the crowd, as long as the destination has snacks",
   },
-  "3": {
+  3: {
     id: "3",
     name: "AKSHAYA",
     role: "Secretary",
-    photos: [
-      "Akshaya.jpg"
-    ],
-    description: "I'm like the mitochondria of the team—small, kinda useless, but somehow managing to stay around. I can follow instructions to perfection (if I don't get distracted by snacks) and try my best to add some cheer to everything, even if it's just by being the awkward one in the room. My dedication is only rivaled by my ability to procrastinate, making me the go-to person for doing things... eventually. But hey, at least I try!",
+    photos: ["Akshaya.jpg"],
+    description:
+      "I'm like the mitochondria of the team—small, kinda useless, but somehow managing to stay around. I can follow instructions to perfection (if I don't get distracted by snacks) and try my best to add some cheer to everything, even if it's just by being the awkward one in the room. My dedication is only rivaled by my ability to procrastinate, making me the go-to person for doing things... eventually. But hey, at least I try!",
     portfolio: "I don't have one",
     energySource: "Sweet Treats and Endless Cups of Tea (mostly to stay awake)",
     dimension: "1920 x 1080",
     type: "Straight (but don't expect much)",
-    hobbiesInstalled: "Helping when I remember, laughing awkwardly, and Spreading Mediocrity",
-    specialFeatures: "Support, Smile, Succeed (with a lot of hesitation)"
+    hobbiesInstalled:
+      "Helping when I remember, laughing awkwardly, and Spreading Mediocrity",
+    specialFeatures: "Support, Smile, Succeed (with a lot of hesitation)",
   },
-  "4": {
+  4: {
     id: "4",
     name: "KAVIYA SREE",
     role: "Secretary",
-    photos: [
-      "Kaviya.jpg"
-    ],
-    description: "A creative mind with a knack for innovation and a love for making ideas come to life. Standing at 5'1” (without heels), I blend curiosity with a practical approach to exploring the world around me. Whether  diving into books or watching movies(my escape to different worlds),I enjoy both the quiet moments and vibrant company.",
+    photos: ["Kaviya.jpg"],
+    description:
+      "A creative mind with a knack for innovation and a love for making ideas come to life. Standing at 5'1” (without heels), I blend curiosity with a practical approach to exploring the world around me. Whether  diving into books or watching movies(my escape to different worlds),I enjoy both the quiet moments and vibrant company.",
     portfolio: "I don't have one",
     energySource: "Random bursts of inspiration, good food, and quiet moments",
     dimension: "Ambivert in 4K resolution",
     type: "Quietly curious, with a spark of spontaneity",
-    hobbiesInstalled: "Reading (but not too much), exploring new perspectives, and occasional deep dives into random topics",
-    specialFeatures: "Ambivert switch ,masterful laugher (error rate: 10%) , a dependable listener, and excellent snack selection skills"
+    hobbiesInstalled:
+      "Reading (but not too much), exploring new perspectives, and occasional deep dives into random topics",
+    specialFeatures:
+      "Ambivert switch ,masterful laugher (error rate: 10%) , a dependable listener, and excellent snack selection skills",
   },
-  "5": {
+  5: {
     id: "5",
     name: "VANATHI",
     role: "Chief Coordinator",
-    photos: [
-      "Vanathi.jpg"
-    ],
+    photos: ["Vanathi.jpg"],
     description: "${CONTENT?'':DEFAULT}",
     portfolio: "I don't have one",
     energySource: "${CONTENT?'':DEFAULT}",
     dimension: "${CONTENT?'':DEFAULT}",
     type: "${CONTENT?'':DEFAULT}",
     hobbiesInstalled: "${CONTENT?'':DEFAULT}",
-    specialFeatures: "${CONTENT?'':DEFAULT}"
+    specialFeatures: "${CONTENT?'':DEFAULT}",
   },
-  "6": {
+  6: {
     id: "6",
     name: "BINU",
     role: "Hiring Manager",
-    photos: [
-      "Binu.jpg"
-    ],
+    photos: ["Binu.jpg"],
     description: "${CONTENT?'':DEFAULT}",
     portfolio: "I don't have one",
     energySource: "${CONTENT?'':DEFAULT}",
     dimension: "${CONTENT?'':DEFAULT}",
     type: "${CONTENT?'':DEFAULT}",
     hobbiesInstalled: "${CONTENT?'':DEFAULT}",
-    specialFeatures: "${CONTENT?'':DEFAULT}"
+    specialFeatures: "${CONTENT?'':DEFAULT}",
   },
-  "7": {
+  7: {
     id: "7",
     name: "GURU",
     role: "CCO",
-    photos: [
-      "Guru.jpg"
-    ],
-    description: "Guru - standing tall at 5'8” (with shoes on), weighing a precise 69 kg, and carrying the charm of someone who's been battling migraines since childhood yet keeps experimenting with life. I  embody the spirit of a 'jack of all trades' in the making. Whether it's dabbling in new hobbies or mastering skills, and also am on a relentless quest to unlock my potential with a side of humor and grit.",
+    photos: ["Guru.jpg"],
+    description:
+      "Guru - standing tall at 5'8” (with shoes on), weighing a precise 69 kg, and carrying the charm of someone who's been battling migraines since childhood yet keeps experimenting with life. I  embody the spirit of a 'jack of all trades' in the making. Whether it's dabbling in new hobbies or mastering skills, and also am on a relentless quest to unlock my potential with a side of humor and grit.",
     portfolio: "I don't have one",
     energySource: "Eggs , Caffeine, and Sheer Determination",
     dimension: "David Laid but 1080p",
     type: "just a Chill Guy",
     hobbiesInstalled: "Jack-of-all-trades beta testing",
-    specialFeatures: "Migraine , Huge Biceps , knows Java , Bad Memory"
+    specialFeatures: "Migraine , Huge Biceps , knows Java , Bad Memory",
   },
-  "8": {
+  8: {
     id: "8",
     name: "JAYA KARAN",
     role: "Treasury",
-    photos: [
-      "JayaKaran.jpg"
-    ],
-    description: "172 cm of pure enthusiasm and extra flesh—thanks to an unbreakable bond with food. Maa DIL runs on songs (more of Hindi), stand-up bits, and cricket highs. Vir Das wit and Samay Raina chaos fuel my daydreams. Makin’ me partial Vadakkan—but no saffron art. Often physically present, mentally lost in a playlist or plotting my imaginary Netflix special. And yeah, I’m a bit more pessimistic—guess it's a flaw, but it keeps me grounded. Source: Wikipedia",
+    photos: ["JayaKaran.jpg"],
+    description:
+      "172 cm of pure enthusiasm and extra flesh—thanks to an unbreakable bond with food. Maa DIL runs on songs (more of Hindi), stand-up bits, and cricket highs. Vir Das wit and Samay Raina chaos fuel my daydreams. Makin’ me partial Vadakkan—but no saffron art. Often physically present, mentally lost in a playlist or plotting my imaginary Netflix special. And yeah, I’m a bit more pessimistic—guess it's a flaw, but it keeps me grounded. Source: Wikipedia",
     portfolio: "I don't have one",
     energySource: "Arijit and Atif songs, Red Bull, Biryani",
     dimension: "0.5 ft shorter than Kyrie",
     type: "Limited edition—pessimistically optimistic",
     hobbiesInstalled: "Coding, learning new cyber stuffs, cooking",
-    specialFeatures: "Can do MID anchoring sometimes, and therapy sessions"
+    specialFeatures: "Can do MID anchoring sometimes, and therapy sessions",
   },
-  "9": {
+  9: {
     id: "9",
     name: "HEMANTH RAJ",
     role: "Technical Lead",
-    photos: [
-      "Hemanth.jpg"
-    ],
-    description: "Based on the Given Prompt: I'm a developur who depends on Caffeine and Googling. Whether it's teaching a 3D avatar to show emotions, building a chatbot that talks back (literally), or debugging jwt tokens, I'm always up for a challenge. My projects range from crafting immersive virtual experiences to creating elegant UI components BECAUSE why settle for simple when you can make it extraordinary? Tailwind CSS is my comfort zone, Prisma keeps my databases in check, and Next.js is where all the magic happens. And no this isn't ChatGPT generated, TRUST ME!",
+    photos: ["Hemanth.jpg"],
+    description:
+      "Based on the Given Prompt: I'm a floridian developur who depends on Caffeine and Googling. Whether it's teaching a 3D avatar to show emotions, building a chatbot that talks back (literally), or debugging jwt tokens, I'm always up for a challenge. My projects range from crafting immersive virtual experiences to creating elegant UI components BECAUSE why settle for simple when you can make it extraordinary? Tailwind CSS is my comfort zone, Prisma keeps my databases in check, and Next.js is where all the magic happens. And no this isn't ChatGPT generated, TRUST ME!",
     portfolio: "https://hemanthraj0c.github.io/My-First-Portfolio/",
     energySource: "Coffee, Coke or anything with caffeine",
     dimension: "800 x 600 (4:3)",
     type: "As long as it Breaths",
     hobbiesInstalled: "Thinking about hobbies... (Still can't figure out)",
-    specialFeatures: "Sometimes Human, Runs a simulation before an actual scenario, Sarcasm Yes"
+    specialFeatures:
+      "Sometimes Human, Runs a simulation before an actual scenario, Sarcasm Yes",
   },
-  "10": {
+  10: {
     id: "10",
     name: "AKSHAY KUMAR",
     role: "Chief Designer",
-    photos: [
-      "Akshay.jpg"
-    ],
-    description: "Legend tells of a being known only as 'Legendary AK' — forged in caffeine, tempered by deadlines, and  powered by panic. I specialize in making simple things complicated, and complicated things... even more complicated. I have no idea what i’m doing most of the time, but i do it with confidence and a weird smile that makes people think I’ve got a plan (i don’t). I respond to stress with memes, avoid responsibilities like a professional ninja, and somehow end up in charge of things I didn’t even sign up for. My presence in the team is like a glitch in the matrix—confusing, unexpected, and somehow still part of the main storyline. I believe in doing things last minute, making things weird on purpose, and pretending everything is under control. If life had patch notes, I’d still skip the tutorial and click 'continue'. Proceed with caution, I might start dancing randomly or ask deep life questions at 3AM. Either way, you won’t forget me.",
+    photos: ["Akshay.jpg"],
+    description:
+      "Legend tells of a being known only as 'Legendary AK' — forged in caffeine, tempered by deadlines, and  powered by panic. I specialize in making simple things complicated, and complicated things... even more complicated. I have no idea what i’m doing most of the time, but i do it with confidence and a weird smile that makes people think I’ve got a plan (i don’t). I respond to stress with memes, avoid responsibilities like a professional ninja, and somehow end up in charge of things I didn’t even sign up for. My presence in the team is something, unexpected, and somehow still part of the main storyline. I believe in doing things last minute, making things weird on purpose, and pretending everything is under control. If life had patch notes, I’d still skip the tutorial and click 'continue'.Either way, you won’t forget me.",
     portfolio: "I don't have one",
     energySource: "Panic + coffee + pretending I have a plan.",
     dimension: "Somewhere between ‘almost there’ and ‘lost again.’",
     type: "Professional procrastinator.",
-    hobbiesInstalled: "Starting projects, forgetting projects, and googling ‘how to fix my life’.",
-    specialFeatures: "Can turn any situation into awkward silence with a single look."
+    hobbiesInstalled:
+      "Starting projects, forgetting projects, and googling ‘how to fix my life’.",
+    specialFeatures:
+      "Can turn any situation into awkward silence with a single look.",
   },
-  "11": {
+  11: {
     id: "11",
     name: "VISHAL",
     role: "Project Lead",
-    photos: [
-      "Vishal.jpg"
-    ],
+    photos: ["Vishal.jpg"],
     description: "${CONTENT?'':DEFAULT}",
     portfolio: "I don't have one",
     energySource: "${CONTENT?'':DEFAULT}",
     dimension: "${CONTENT?'':DEFAULT}",
     type: "${CONTENT?'':DEFAULT}",
     hobbiesInstalled: "${CONTENT?'':DEFAULT}",
-    specialFeatures: "${CONTENT?'':DEFAULT}"
+    specialFeatures: "${CONTENT?'':DEFAULT}",
   },
-  "12": {
+  12: {
     id: "12",
     name: "ALWIN ARUL SHELVAN",
     role: "Documentation",
-    photos: [
-      "Alwin.jpg"
-    ],
-    description: "A Floridian Guy who acts like the team's Wi-Fi—always there when you need me, but somehow vanishing when you don't. I'm a master of creating problems (Case karan eyy namma tha) and, when I feel like it, solving them. I bring calm to the chaos, unless I'm the one making it, of course. Whether I'm adding unnecessary complexity to simple tasks or motivating everyone (by sheer force of my silent presence), I make sure no day is ever boring. I'm the quiet storm that gets things done—whether anyone asked for it or not.",
+    photos: ["Alwin.jpg"],
+    description:
+      "A Floridian Guy who acts like the team's Wi-Fi—always there when you need me, but somehow vanishing when you don't. I'm a master of creating problems (Case karan eyy namma tha) and, when I feel like it, solving them. I bring calm to the chaos, unless I'm the one making it, of course. Whether I'm adding unnecessary complexity to simple tasks or motivating everyone (by sheer force of my silent presence), I make sure no day is ever boring. I'm the quiet storm that gets things done—whether anyone asked for it or not.",
     portfolio: "I don't have one",
     energySource: "Any restaurant (Non-veg) at Florida… :)",
     dimension: "1:1 (Perfect balance of skill and dedication)",
     type: "Processing…. :( <Process Failed>",
-    hobbiesInstalled: "Playing Basketball (Indian Stephen Curry), Watching “Tamil” Movies (Anil mode activated)",
-    specialFeatures: "Orator, Good listener, Punctual"
+    hobbiesInstalled:
+      "Playing Basketball (Indian Stephen Curry), Watching “Tamil” Movies (Anil mode activated)",
+    specialFeatures: "Orator, Good listener, Punctual",
   },
 };
 
