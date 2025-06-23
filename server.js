@@ -274,7 +274,7 @@ const members = {
     name: "VISHAL",
     role: "Project Lead",
     photos: ["Vishal.jpg"],
-    description: " NOT A GOOD WORKER AND A USELESS WAST OFTHE CLUB",
+    description: " NOT A GOOD WORKER AND A USELESS WASTE OF THE CLUB",
     portfolio: "https://cosmic-striker.github.io/",
     energySource: "WILL INFORM AFTER FINDING ",
     dimension: "3 DIMENISION IN SPACE AND 1 DIMENISION IN TIME ",
