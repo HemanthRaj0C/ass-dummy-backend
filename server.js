@@ -251,7 +251,7 @@ const members = {
     role: "Technical Lead",
     photos: ["Hemanth.jpg"],
     description:
-      "Based on the Given Prompt: I'm a floridian developur who depends on Caffeine and Googling. Whether it's teaching a 3D avatar to show emotions, building a chatbot that talks back (literally), or debugging jwt tokens, I'm always up for a challenge. My projects range from crafting immersive virtual experiences to creating elegant UI components BECAUSE why settle for simple when you can make it extraordinary? Tailwind CSS is my comfort zone, Prisma keeps my databases in check, and Next.js is where all the magic happens. And no this isn't ChatGPT generated, TRUST ME!",
+      "Based on the Given Prompt: I'm a developur who depends on Caffeine and Googling. Whether it's teaching a 3D avatar to show emotions, building a chatbot that talks back (literally), or debugging jwt tokens, I'm always up for a challenge. My projects range from crafting immersive virtual experiences to creating elegant UI components BECAUSE why settle for simple when you can make it extraordinary? Tailwind CSS is my comfort zone, Prisma keeps my databases in check, and Next.js is where all the magic happens. And no this isn't ChatGPT generated, TRUST ME!",
     portfolio: "https://hemanthraj0c.github.io/My-First-Portfolio/",
     energySource: "Coffee, Coke or anything with caffeine",
     dimension: "800 x 600 (4:3)",
@@ -281,7 +281,7 @@ const members = {
     name: "VISHAL",
     role: "Project Lead",
     photos: ["Vishal.jpg"],
-    description: " NOT A GOOD WORKER AND A USELESS WASTE OF THE CLUB",
+    description: "NOT A GOOD WORKER AND A USELESS WASTE OF THE CLUB",
     portfolio: "https://cosmic-striker.github.io/",
     energySource: "WILL INFORM AFTER FINDING ",
     dimension: "3 DIMENISION IN SPACE AND 1 DIMENISION IN TIME ",
